@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    
+    <title>Mi primer formulario</title>
+
+
+</head>
+<body>
+    <form 
+    class="myForm"
+    method="GET" 
+    enctype="application/x-www-form-urlencoded" 
+    action="/noxiste.html">
+        <p>
+            <label>Nombre
+                <input type="text" name="nombre_cliente" required>
+            </label>
+        </p>
+        <p>
+            <label>Telefono
+                <input type="tel" name="numero_telefono" required>
+            </label>
+        </p>
+        <p>
+            <label>Email
+                <input type="email" name="direccion_correo">
+            </label>
+        </p>
+        <fieldset>
+            <legend>Que taxi quiere?</legend>
+            <p>
+                <label>
+                    <input type="radio" name="taxi" required value="tuktuk">
+                    tuktuk
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="radio" name="taxi" required value="SUV">
+                    SUV
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="radio" name="taxi" required value="moto">
+                    moto
+                </label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Extras</legend>
+            <p>
+                <label>
+                    <input type="checkbox" name="extras">
+                    Silla de bebe
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" name="extras">
+                    NO REGUETON
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" name="extras">
+                    Silla de ruedas
+                </label>
+            </p>
+        </fieldset>
+        <p>
+            <label>Dia y hora?</label>
+            <input type="datetime-local" name="fecha_hora" required>
+        </p>
+        <p>
+            <label>Lugar para recojer
+                <select id="pickup_place" name="pickup_place">
+                    <option value="" selected>Seleccione Opcion</option>
+                    <option value="Oficina">Oficina</option>
+                    <option value="feria">La feria</option>
+                    <option value="la_U">La Universidad</option>
+                    <option value="no_se">Le digo al cacho</option>
+                </select>
+            </label>
+        </p>
+
+        <p>
+            <label>Dejar en:
+                <input type="text" name="dejar_en" required list="destino">
+            </label>
+            <datalist id="destino">
+                <option value="Aereopuerto"></option>
+                <option value="Playa"></option>
+                <option value="La biblioteca"></option>
+            </datalist>
+            <p>
+                <label>Instrucciones Especiales
+                    <textarea name="comentario" maxlength="500"></textarea>
+                </label>
+            </p>
+            <p>
+                <button>Hacer Cita</button>
+            </p>
+        </p>
+    </form>
+</body>
+</html>
